@@ -1,18 +1,22 @@
-//calcola la somma e la media dei primi 10 numeri (10 prompt)
+//L’utente sceglie pari o dispari e inserisce un numero da 1 a 5.
+// Generiamo un numero random (sempre da 1 a 5) per il computer
+// (usando una funzione).
+// Sommiamo i due numeri
+// Stabiliamo se la somma dei due numeri è pari o dispari
+// (usando una funzione)
+// Dichiariamo chi ha vinto.
 
-var num1 = prompt("Inserisci primo numero");
-var num2 = prompt("Inserisci secondo numero");
-var num3 = prompt("Inserisci terzo numero");
-var num4 = prompt("Inserisci quarto numero");
-var num5 = prompt("Inserisci quinto numero");
-var num6 = prompt("Inserisci sesto numero");
-var num7 = prompt("Inserisci settimo numero");
-var num8 = prompt("Inserisci ottavo numero");
-var num9 = prompt("Inserisci nono numero");
-var num10 = prompt("Inserisci decimo numero");
+var numeroUtente = prompt("inserisci un numero da 1 a 5");
+console.log("Il numero Utente é: " + numeroUtente);
 
-//var sum = parseInt((num1+num2+num3+num4+num5+num6+num7+num8+num9+num10))
-var sum = parseInt(num1)+parseInt(num2)+parseInt(num3)+parseInt(num4)+parseInt(num5)+parseInt(num6)+parseInt(num7)+parseInt(num8)+parseInt(num9)+parseInt(num10);
-console.log(sum);
-var media = sum/10;
-console.log(media);
+
+var numeroComputer = Math.floor(Math.random()*5 + 1);
+console.log("Il numero Computer é: " + numeroComputer);
+
+var numSomma = (numeroUtente + numeroComputer);
+
+if(numSomma%2 == 0){
+  console.log("Vince il pari");
+}else{
+  console.log("Vince il dispari");
+}
